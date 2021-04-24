@@ -1,0 +1,8 @@
+{
+  "name": "rn-firebase-reanimated-template",
+  "version": "0.0.5",
+  "description": "React Native Template",
+  "repository": "https://github.com/princejoogie/rn-firebase-reanimated-template.git",
+  "author": "Prince Carlo Juguilon <princejoogie@gmail.com>",
+  "license": "MIT"
+}
