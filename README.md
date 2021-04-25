@@ -1,7 +1,11 @@
 # react-native-firebase-reanimated-template
 
-This template has [Reanimated](https://docs.swmansion.com/react-native-reanimated/), [Firebase](https://rnfirebase.io/), and [React Navigation](https://reactnavigation.org/) pre installed
-
+## Included packages
+- [react-native-reanimated](https://docs.swmansion.com/react-native-reanimated/)
+- [react-native-firebase/app](https://rnfirebase.io/)
+- [react-navigation/native](https://reactnavigation.org/)
+- [react-native-svg](https://github.com/react-native-svg/react-native-svg)
+- [tailwind-rn](https://github.com/vadimdemedes/tailwind-rn)
 
 ## Usage
 1. Initialize a new React Native Project
