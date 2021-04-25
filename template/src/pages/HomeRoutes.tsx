@@ -1,11 +1,10 @@
 import React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import ReanimatedList from '@components/reanimated-tests/ReanimatedList';
 import FirebaseList from '@components/firebase-tests/FirebaseList';
-import Home from 'components/Home';
 import { NavigationProp } from '@react-navigation/native';
 
-const HomeStack = createStackNavigator();
+const HomeStack = createMaterialTopTabNavigator();
 
 interface HomeRoutesProps {
   navigation: NavigationProp<any, any>;
@@ -13,10 +12,32 @@ interface HomeRoutesProps {
 
 const HomeRoutes: React.FC<HomeRoutesProps> = () => {
   return (
-    <HomeStack.Navigator initialRouteName="Home">
-      <HomeStack.Screen name="Home" component={Home} />
-      <HomeStack.Screen name="Reanimated" component={ReanimatedList} />
-      <HomeStack.Screen name="Firebase" component={FirebaseList} />
+    <HomeStack.Navigator
+      initialRouteName="Reanimated"
+      tabBarPosition="bottom"
+      backBehavior="none"
+      tabBarOptions={{
+        labelStyle: {
+          textTransform: 'capitalize',
+        },
+        indicatorStyle: {
+          height: 0,
+        },
+      }}>
+      <HomeStack.Screen
+        name="Reanimated"
+        component={ReanimatedList}
+        options={{
+          tabBarLabel: '🎨 Reanimated',
+        }}
+      />
+      <HomeStack.Screen
+        name="Firebase"
+        component={FirebaseList}
+        options={{
+          tabBarLabel: '🔥 Firebase',
+        }}
+      />
     </HomeStack.Navigator>
   );
 };

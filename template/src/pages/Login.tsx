@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, View } from 'react-native';
+import { Text, TouchableOpacity, View } from 'react-native';
 import { NavigationProp } from '@react-navigation/native';
 import tailwind from 'tailwind-rn';
 
@@ -10,7 +10,11 @@ interface LoginProps {
 const Login: React.FC<LoginProps> = ({ navigation }) => {
   return (
     <View style={tailwind('flex flex-1 items-center justify-center')}>
-      <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
+      <TouchableOpacity
+        onPress={() => navigation.navigate('Home')}
+        style={tailwind('px-4 py-2 bg-gray-300 rounded')}>
+        <Text>Go to Home</Text>
+      </TouchableOpacity>
     </View>
   );
 };
