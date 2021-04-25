@@ -1,4 +1,6 @@
-# rn-firebase-reanimated-template
+# react-native-firebase-reanimated-template
+
+This template has [Reanimated](https://docs.swmansion.com/react-native-reanimated/), [Firebase](https://rnfirebase.io/), and [React Navigation](https://reactnavigation.org/) pre installed
 
 
 ## Usage
