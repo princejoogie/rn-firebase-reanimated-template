@@ -13,7 +13,7 @@
 
 ### Android
 1. Create an android application in [Firebase Console](https://console.firebase.google.com)
-- `(optional)` Debug signing certificate SHA-1: run `cd android && ./gradlew signingReport && cd ..`
+- `(optional)` Debug signing certificate SHA-1: Run `cd android && ./gradlew signingReport && cd ..`
 2. Download the `google-services.json` and place it under `android/app`
 3. Run `cd android && ./gradlew clean && cd ..`
 4. Run android with `yarn run android`
