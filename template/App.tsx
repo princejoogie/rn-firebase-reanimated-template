@@ -1,15 +1,30 @@
 import React from 'react';
-import { View } from 'react-native';
+import { StatusBar } from 'react-native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
 import tailwind from 'tailwind-rn';
-import Expand from '@components/reanimated-tests/Expand';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import Login from '@pages/Login';
+import HomeRoutes from 'pages/HomeRoutes';
 
-interface AppProps {}
+const Stack = createStackNavigator();
 
-const App: React.FC<AppProps> = () => {
+const App: React.FC = () => {
   return (
-    <View style={tailwind('flex flex-1')}>
-      <Expand />
-    </View>
+    <NavigationContainer>
+      <SafeAreaView style={tailwind('flex flex-1 bg-gray-100')}>
+        <StatusBar backgroundColor="#fff" barStyle="dark-content" />
+
+        <Stack.Navigator initialRouteName="Login" mode="modal">
+          <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen
+            name="Home"
+            component={HomeRoutes}
+            options={{ headerShown: false }}
+          />
+        </Stack.Navigator>
+      </SafeAreaView>
+    </NavigationContainer>
   );
 };
 
